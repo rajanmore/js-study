@@ -3,11 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Variables and Data Type</title>
 </head>
 <body>
+
     <script>
-        console.log("Om Namah Shivay");
+        //variables
+        proName = "Dell Mouse";
+        price = 2150;
+        console.log(proName);
+        console.log(price);
+
+        //Data Type
+        console.log(typeof proName);
+        console.log(typeof price);
+
+        // create object
+        const student = {
+            fullName : "Rajendra Yuvraj More",
+            age : 20,
+            gender : "male",
+            isPass: true
+        }
+        console.log(student);
+
+        // accsess object property method 1
+        console.log(student.fullName);
+        console.log(student.age);
+        console.log(student.gender);
+        console.log(student.isPass);
+
+        // accsess object property method 2
+        console.log(student["fullName"]);
+        console.log(student["age"]);
+
+        // asscess object property and update values
+        student.fullName = "Shivam Rajendra More";
+        console.log(student.fullName);
+        
+        student["age"]= student["age"] + 10;
+        console.log(student.age);
+
     </script>
 
 </body>
