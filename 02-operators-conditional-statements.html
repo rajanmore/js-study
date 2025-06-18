@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a = 5;
+        let b = 2;
+        //Operators
+            //1. Arithmetic Operators (+ | - | * | / | % | **)
+                // 1.1 modulus operator [%]
+                console.log(a%b); // print will be 1
+                // 1.2 exponent operator [**]
+                console.log(a**b) // 5^2 = 25
+                // 1.3 increment [++] (this is unary operator)
+                console.log(++a); // print will be 6
+                // 1.4 decrement [--] (this is unary operator)
+                console.log(--a); // print will be 5
+
+            //2. Assignment Operators (= |+= | -= | *= | /= | %= | **=)
+                a += 5; // a = a + 5
+                console.log(a); //print will be 10
+
+                a -= 5; // a = a - 5
+                console.log(a); // pritn will be 5
+
+                a *= 5; // a = a * 5
+                console.log(a); // print will be 25
+
+                a /= 5; // a = a / 5
+                console.log(a); // print will be 5
+
+                a %= 5; // a = a % 5
+                console.log(a); // print will be 0
+
+                a **= 5; // a = a ** 5
+                console.log(a); // print will be 0
+
+            //3. Comparison Operators (== | === | != | > | < | >= | <=)
+            c = 4;
+            d = 9;
+
+            console.log("c == d : " + (c == d)); // print will be false
+            console.log("c === d : " + (c === d)); // print will be false 
+            console.log("c != d : " + (c != d)); // print will be true
+            console.log("c > d : " + (c > d)); // print will be false
+            console.log("c < d : " + (c < d)); // print will be true
+            console.log("c >= d : "  + (c >= d)); // print will be false
+            console.log("c <= d : " + (c <= d)); // print will be true
+
+        //4. Logical Operators (&& | || | !)
+            //4.1. && (and)
+            console.log("c < d && 13 == c+d : "+ (c < d && 13 == c+d));
+            //4.2. || (or)
+            console.log("c < d || 14 == c+d : " + (c < d || 14 == c+d));
+            //4.3. ! (not)
+            console.log("!(c < d) : " + !(c < d));
+            console.log("!(c > d) : " + !(c > d));
+            console.log("!(c = d) : " + !(c = d));
+        //5. Ternary Operators
+            console.log("c < d ? 'c is less than d' : 'c is greater than d' : " + (c < d ? 'c is less than d' : 'c is greater than d'));
+            age = 20;
+            console.log("age >= 18 ? 'You can vote' : 'You can not vote' : " + (age >= 18 ? 'You can vote' : 'You can not vote'));
+            console.log()
+        //Conditional Statements
+            //1. if
+            //2. if else            
+            //3. Comparison Operators
+            //4. Logical Operators
+    </script>
+</body>
+</html>
