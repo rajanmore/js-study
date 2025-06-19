@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Operators and conditional statements</title>
 </head>
 <body>
     
@@ -65,12 +65,67 @@
             console.log("c < d ? 'c is less than d' : 'c is greater than d' : " + (c < d ? 'c is less than d' : 'c is greater than d'));
             age = 20;
             console.log("age >= 18 ? 'You can vote' : 'You can not vote' : " + (age >= 18 ? 'You can vote' : 'You can not vote'));
-            console.log()
+            
+
+
+
         //Conditional Statements
             //1. if
-            //2. if else            
-            //3. Comparison Operators
-            //4. Logical Operators
+            let userAge = 20;
+            if(userAge >= 18){
+                console.log("You can vote");
+            }
+
+            //2. if else  
+            if(userAge >= 21){
+                console.log("You can marry");
+            }else{
+                console.log("You can not marry");
+            }   
+
+            //3. if | else if | switch
+            let score = 90;
+
+            if(score >= 100){
+                console.log("A")
+            }else 
+            if (score >= 70){
+                console.log("B")
+            }else if(score >= 60){
+                console.log("C")
+            }else if(score >= 50){
+                console.log("D")
+            }else{
+                console.log("F")
+            }
+
+            //4. switch
+            switch (true) {
+            case (score >= 100):
+                console.log("A");
+                break;
+            case (score >= 70):
+                console.log("B");
+                break;
+            case (score >= 60):
+                console.log("C");
+                break;
+            case (score >= 50):
+                console.log("D");
+                break;
+            default:
+                console.log("F");
+            }
+
+            let mode = "dark";
+            let color;
+            if (mode == "dark"){
+                color = "white"
+            }
+            if (mode == "light"){
+                color = "black"
+            }
+            console.log(color);
     </script>
 </body>
 </html>
