@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Quiz</title>
+</head>
+<body>
+    <h3>03 Loop and strings</h3>
+    <p>Qs1. Print all even numbers from 0 to 15.</p>
+    <p>Qs2. Create a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters correct value.</p>
+    
+
+
+
+    <script>
+        //03 Loop and strings
+        //Qs1. Print all even numbers from 0 to 15.
+        console.log("----- Print all even numbers from 0 to 15 ---------");
+        for(let i = 0; i <= 15; i++){
+           
+            if(i % 2 == 0){
+                console.log(i);
+            }
+        }
+        //Qs2.Create a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters correct value.
+        console.log("----- Create a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters correct value. ---------");
+        let computerNumber = 18;
+        userNumber = prompt('enter your number');
+        
+        while(userNumber != computerNumber){
+            userNumber = prompt('wrong number enter again')
+        }
+        console.log('you win, it was', computerNumber);
+    </script>
+
+</body>
+</html>
