@@ -3,34 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loop and strings</title>
+    <link rel="stylesheet" href="">
+    <title>03 Loop and strings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
 </head>
 <body>
+    <section class="container-fluid">
+        <h1>03 Loop and strings</h1>
+        <p>Loops can execute a block of code a number of time</p>
+        <h2>Kinds of Loops</h2>
+        <ol>
+            <li><b>for loop:</b> Loops through a block of code a number of times</li>
+            <li><b>while loop:</b> Loops through a block of code until a certain condition is met</b></li>
+            <li><b>do while loop:</b> Loops through a block of code until a certain condition is met</b></li>
+            <li><b>for-of loop:</b> Loops through a block of code until a certain condition is met</b></li>
+            <li><b>for-in loop:</b> Loops through a block of code until a certain condition is met</b></li>
+        </ol>
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                         <h4 class="mb-0">For loop</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped mb-3">
+                            <thead>
+                                <tr id="carsHeader"></tr>
+                            </thead>
+                            <tbody id="cars"></tbody>
+                        </table>
+                         <div id="output" class=""></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                         <h4 class="mb-0">While loop</h4>
+                    </div>
+                    <div class="card-body">
+                         
+
+                        <table class="table table-bordered table-striped mb-3">
+                            <thead>
+                                <tr id="wlCarsHeader"></tr>
+                            </thead>
+                            <tbody id="wlCars"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                         <h4 class="mb-0">Do while loop</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr id="doWcarsHeader"></tr>
+                            </thead>
+                            <tbody id="doWcars"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     
     <script>
         
         // for loop
-        console.log("----- for loop ---------");
-        for(let i = 1; i <= 5; i++){
-             console.log(i);
+        console.log("----- for loop 01 ---------");
+        
+        for(let i = 1; i <= 10; i++){
+             document.getElementById("output").innerHTML +=  i;
         }
+        
+        console.log("----- for loop 02 ---------");
+
+        const cars= ["Volvo", "BMW", "Ford", "Mazda"];
+        const carPrices = [15000, 20000, 25000, 30000];
+        const carModels = ["V2", "Q3", "VII", "XY"];
+
+        const carHeader = ["Car", "Price", "Model"];
+
+        for (let i = 0; i < carHeader.length; i++) {
+            document.getElementById("carsHeader").innerHTML += "<th>" + carHeader[i] + "</th>";
+        }
+
+        for (let j=0; j < cars.length; j++){
+            document.getElementById("cars").innerHTML  += "<tr>" + "<td>" + cars[j] + "</td>" + "<td>" + carPrices[j] + "</td>" + "<td>" + carModels[j] + "</td>" + "</tr>";
+        }
+
 
         // while loop
         console.log("----- While loop ---------");
-        let i = 1;
-        while(i <= 5){
-            console.log(i);
-            i++;
+        let wl = 0 ;
+        let wlH =0 ;
+        /*while(wl <= 10){
+            console.log(wl);          
+            document.getElementById("wlNum").innerHTML += wl + " ";
+            wl++;
+        }*/
+        while(wlH < carHeader.length){
+            document.getElementById("wlCarsHeader").innerHTML += 
+            "<th>" + carHeader[wlH] + "</th>";
+            wlH++;
         }
+        while(wl < cars.length){
+            console.log(wl);                 
+            document.getElementById("wlCars").innerHTML += 
+            "<tr>" + 
+                "<td>" + cars[wl] + "</td>" + 
+                "<td>" + carPrices[wl] + "</td>" + 
+                "<td>" + carModels[wl] + "</td>" + 
+            "</tr>";
+             wl++;            
+        }
+
+
+
 
         // do while loop
         console.log("----- do while loop ---------");
-        let j = 1;
+        let k = 0;
+        let j = 0 ;
+        do{
+            console.log(k);
+            document.getElementById("doWcarsHeader").innerHTML += "<th>" + carHeader[k] + "</th>";
+            k++;
+        }while(k < carHeader.length);
+
         do{
             console.log(j);
+            document.getElementById("doWcars").innerHTML += 
+            "<tr>" + 
+                "<td>" + cars[j] + "</td>"+
+                "<td>" + carPrices[j] + "</td>"+
+                "<td>" + carModels[j] + "</td>"+
+            "</tr>";
             j++;
-        }while(j <= 5);
+        }while(j < cars.length);
+
+
+
+
 
         //for-of loop
         console.log("----- for-of loop ---------");
@@ -57,8 +183,6 @@
             
         }
 
-        
-
         // string loop
         console.log("----- String loop ---------");
         let str = "Shiva\nSanu";
@@ -69,7 +193,29 @@
         console.log(str[6]);
         console.log(str.length);
 
+            // string method
+            console.log("----- String method ---------");
+            let str2 = "Shivam More";
+            console.log(str2.toUpperCase());
+            console.log(str2.toLowerCase());
+            console.log(str2.length);
+            console.log(str2.indexOf("e"));
+            console.log(str2.lastIndexOf("e"));
+            console.log(str2.charAt(4));
+            console.log(str2.slice(4, 8));
+            console.log(str2.split(" "));
+            console.log(str2.replace("am", "AM"));
 
+            //Template string
+            console.log("----- Template string ---------");
+            let student = {
+                name: "Shivam More",
+                age:20
+            };
+            let age = 20;
+            let str3 = `My name is ${student.name} and my age is ${student.age}`; // string interpolation
+            console.log(str3);
+            console.log("My name is", student.name, "and my age is", student.age);
 
     </script>
 </body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 Arrays</title>
+</head>
+<body>
+
+    <script>
+        //arrays
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        //numbers[1] = 22;
+        //console.log(numbers);
+
+        console.log("----- numbers length -----");
+        console.log(numbers.length);
+
+        console.log("----- for loop -----");
+        for(let i = 0; i < numbers.length; i++){
+            console.log(numbers[i]);
+        }
+
+         //while loop
+        console.log("----- While loop ---------");
+        let i = 0;
+        while(i < numbers.length){
+            console.log(numbers[i]);
+            i++;
+        }
+        
+        console.log("----- do while loop ---------");
+        let j = 0;
+        do{
+            console.log(numbers[j]);
+            j++;
+        }while(j < numbers.length);
+
+
+
+        let names = ['Rajendra', 'Shivam', 'Sanavi']; 
+        names[2] = "Sanika";
+        console.log(names);
+        //console.log(names.length);
+
+        for(let i = 0; i < names.length; i++){
+            console.log(names[i]);
+        }
+        
+    </script>
+</body>
