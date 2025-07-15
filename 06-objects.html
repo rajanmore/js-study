@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 Objects
+        
+    </title>
+</head>
+<body>
+    <p>Out-put by userData["Full Name"]</p>
+    <p id="output1"></p>
+    <p>Out-put by userData.Edu</p>
+    <p id="output2"></p>
+
+
+
+    <script>
+
+        const userData = {
+            "Full Name" : "Shiva Raju More",
+            Address: "Mahalunge Pune",
+            phone : 1234567890,
+            [Symbol('id')] : 101,
+            [Symbol('role')]: "Admin",
+            [id]:"uk"
+        }
+
+        document.getElementById("output1").innerHTML = userData["Full Name"];
+        document.getElementById("output2").innerHTML = userData.Role;
+
+    </script>
+</body>
+</html>

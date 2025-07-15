@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 Function and Parameter</title>
+</head>
+<body>
+    
+    <script>
+        console.log("------ test function -----");
+
+        function myFunction(a, b){
+            console.log(a * b)
+        }
+        myFunction(2,6);
+
+        console.log("------ test function 2 How return work-----");
+
+        function mul(x, y){
+           return x * y;
+        }
+        let result = mul(2, 6);
+        console.log(result);
+
+        
+
+        console.log("------ test function 3 small project welcome message after login -----");
+        function loginUser(userName){
+            //if(undefined === userName){  //use this or
+            if(!userName){                 //use this
+                console.log(`Please enter user name`);
+                return
+            }
+            console.log(`Welcome ${userName}`)
+        }
+        loginUser()
+        loginUser("Shivam")
+
+        console.log("------ test function 4 small project return all product value -----");
+
+        function myCartTotal(...price){
+            return price
+        }
+        console.log(myCartTotal(20, 200, 400, 500, 600));
+
+
+        console.log("------ test function 5 small project how to handel objects -----");
+        const user = {
+            Name: "Shiv Shankar",
+            Address: "Kailash Parvat",
+        }
+        function handleObjects(anyObject){
+            console.log(`${anyObject.Name} resides in ${anyObject.Address}`);
+        }
+        
+        handleObjects(user);
+
+
+        handleObjects(
+            {
+                Name: "Bhagwan Visnu",
+                Address: "Badrinath",
+            }
+        );
+
+        console.log("------ test function 6 small project how to handel Array -----");
+
+        const myArr = [200, 400, 600, 800]
+
+        function handleArr(anyArr){
+            return anyArr[2];  // for access any single value
+            //return anyArr;  // for full array
+        }
+
+        console.log(handleArr(myArr))
+        console.log(handleArr([900, 674, 653,256]))
+        console.log(handleArr([45, 33, 25,77]))
+
+        console.log("------ test function 7 nesting function -----");
+        
+        function one(){
+            const stuName = "Chakradhar";
+            function two(){
+                const location = "Kashi"
+                console.log(stuName)
+            }
+            two()
+            //console.log(location)
+        }
+        one()
+        
+    </script>
+</body>
+</html>

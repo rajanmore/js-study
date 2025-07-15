@@ -104,6 +104,27 @@
             document.getElementById("cars").innerHTML  += "<tr>" + "<td>" + cars[j] + "</td>" + "<td>" + carPrices[j] + "</td>" + "<td>" + carModels[j] + "</td>" + "</tr>";
         }
 
+        console.log("----- for loop 03 ---------");
+        for (let i = 1; i <= 7; i++ ){
+            if(i == 5){
+                console.log(`${i} is best number`)
+                //break //it will stop loop on number 5
+            }
+            console.log(i)
+        }
+
+        console.log("----- for loop 04 ---------");
+        for (let i = 1; i <= 4; i++ ){
+            console.log(`Table of ${i}`)
+            for (let j=1; j <= 10; j++){
+                console.log(i * j)
+            }
+            
+        }
+
+        
+
+
 
         // while loop
         console.log("----- While loop ---------");
@@ -159,7 +180,7 @@
 
 
         //for-of loop
-        console.log("----- for-of loop ---------");
+        console.log("----- for-of loop 01 ---------");
         let str1 = "Shivam More";
         strL =0;
         for(let i of str1){
@@ -171,6 +192,21 @@
             length = str1.length;
             console.log("Lenght of string: ", length);
 
+                // High Order Array loops: 
+            console.log("----- for-of loop 02 | High Order Array loops  ---------");
+
+            const arr = [1, 2, 3, 4, 5]
+            for (const num of arr){
+                console.log(`we use here Array ${num}`)
+            }
+
+            const newStr = "Shivam More";
+            for (const num of newStr){
+                console.log(`we use here String ${num}`)
+            }
+
+
+            
         //for-in loop
         console.log("----- for-in loop ---------");
         let obj = {

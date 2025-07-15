@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <script>
+        console.log("------ Use of this --------");
+        const user = {
+            "User Name" : "Shiva",
+            course: "JS basic to advanced",
+            price: 1299,
+            welcomemsg: function(){
+                console.log(`Welcome ${this["User Name"]}`);
+                console.log(`Your cource is ${this.course}`);
+                let newUser = "Shivam";
+                console.log(this.newUser); 
+            },
+            welcomemsg2: () => {
+                console.log(`Welcome ${this["User Name"]}`);
+                console.log(`Your cource is ${this.course}`);
+                let newUser = "Shivam";
+                console.log(this.newUser); 
+            },
+        };
+        
+        user.welcomemsg();
+        user.course = "jQuery"
+        user.welcomemsg(); 
+        console.log(this)
+
+        console.log("------ Fat arrow function --------");
+        user.welcomemsg2();
+
+         myFun = () =>{
+            this.newUser = "Shivam";
+            console.log(this.newUser)
+        };
+
+
+        console.log("------Immediately Invoked Function Expressions IIFE-------");
+        
+        (function iife(){
+            console.log(`DB connected`);
+        })();
+        
+        ((name) =>{
+            console.log(`${name} DB connected: arrow function`);
+        })("Shiv");
+       
+
+
+
+    </script>
+</body>
+</html>
