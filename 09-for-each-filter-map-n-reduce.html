@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const myNum = [1, 2, 3, 5, 6, 7, 8, 9, 10]
+
+        const value = myNum.forEach( (i) => {
+            console.log (i);
+            return i
+        });
+        console.log (`return valuen is ${value}`); // Result will be "undefined", forEach can't return value
+        
+        console.log("----- filter with forEach");
+        const newNum = [] // take empty Array
+        myNum.forEach((num) => {
+            if (num > 5){
+                //console.log(num)
+                newNum.push(num);
+            }
+        });
+        console.log(newNum)
+
+        console.log("----- filters with filter ------");
+        const newFltr = myNum.filter ((i) => i > 5); 
+        /*const newFltr = myNum.filter ((i) => {
+            return i > 5
+        }); */ //if you add scope then you need add return value
+
+        console.log(newFltr)
+
+        //Pracice for filters
+        console.log("------ Pracice for filters --------")        
+        const books = [
+            { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
+            { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
+            { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
+            { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010 },
+            { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 },
+            { title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010 },
+            { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 },
+            { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
+            { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
+        ];
+
+
+        const ftrGen = books.filter( (bk) => bk.genre === 'Non-Fiction')
+        console.log(ftrGen);
+
+        const ftrPub = books.filter( (bk) => bk.publish >= 2000)
+        console.log(ftrPub)
+
+        const ftrMult = books.filter( (bk) => bk.genre === "Fiction" && bk.publish <= 2000)
+        console.log(ftrMult)
+
+
+
+
+    </script>
+</body>
+</html>
